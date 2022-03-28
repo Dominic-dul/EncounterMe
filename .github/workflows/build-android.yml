@@ -22,7 +22,7 @@ jobs:
       run: nuget restore EncounterMeApp.sln
 
     - name: Build
-      run: msbuild EncounterMeApp.sln
+      run: msbuild /t:PackageForAndroid /p:Configuration=Debug
       
     - name: Run Tests
       run: dotnet test
